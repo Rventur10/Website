@@ -7,6 +7,7 @@
   "license": "0BSD",
   "starter-name": "gatsby-starter-portfolio-cara",
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
@@ -14,6 +15,12 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
+  },
+  "overrides": {
+    "body-parser": "1.20.3",
+    "axios": "1.7.7",
+    "webpack-dev-middleware": "7.4.2",
+    "path-to-regexp": "0.1.10"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^5.1.4",
@@ -27,6 +34,7 @@
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "ajv": "^7.2.4",
     "cross-env": "^7.0.3",
     "typescript": "^5.5.3"
   }
